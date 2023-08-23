@@ -84,7 +84,6 @@ const Post: React.FC<PostProps> = (props) => {
 		<>
 			<Head>
 			
-				<meta property="og:site_name" content={host.split('.')[0]} />
 				<meta property="og:image" content={post.featuredImage.node.sourceUrl} />
 				<meta
 					property="og:image:alt"
