@@ -88,7 +88,7 @@ const Post: React.FC<PostProps> = (props) => {
 				<meta property="og:image" content={post.featuredImage.node.sourceUrl} />
 				<meta
 					property="og:image:alt"
-					content={post.featuredImage.node.altText}
+					content={post.featuredImage.node.altText || post.title}
 				/>
 				
 			</Head>
@@ -97,7 +97,7 @@ const Post: React.FC<PostProps> = (props) => {
 					src={post.featuredImage.node.sourceUrl}
 					alt={post.featuredImage.node.altText || post.title}
 				/>
-				<article dangerouslySetInnerHTML={{ __html: post.content }} />
+				
 			</div>
 		</>
 	);
